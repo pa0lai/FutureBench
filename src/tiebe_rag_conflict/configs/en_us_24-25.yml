@@ -1,0 +1,30 @@
+region: the_United_States
+split: english
+year_min: 2023
+year_max: 2024
+start_month: 10
+end_month: 5
+max_items: 500
+retriever:
+  provider: openai
+  encoder: text-embedding-3-small
+  batch_size: 64
+  topk: 10
+  api_key_env: OPENAI_API_KEY
+model:
+  provider: openrouter
+  name: meta-llama/llama-3.1-8b-instruct
+  endpoint: https://openrouter.ai/api/v1
+  max_tokens: 128
+  temperature: 0.0
+  timeout: 120
+  workers: 10
+eval:
+  modes:
+  - openqa
+  ctx_types:
+  - 'true'
+  - 'false'
+  - insuf
+  seed: 7
+output_dir: runs/en_us_2024_llama31/

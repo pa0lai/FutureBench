@@ -1,0 +1,27 @@
+region: the_United_States
+split: english
+year_min: 2024
+year_max: 2025
+start_month: 12
+end_month: 10
+retriever:
+  provider: openai
+  encoder: text-embedding-3-small
+  batch_size: 64
+  topk: 10
+  api_key_env: OPENAI_API_KEY
+model:
+  provider: openrouter
+  name: meta-llama/llama-4-maverick
+  endpoint: https://openrouter.ai/api/v1
+  max_tokens: 4096
+  temperature: 0.0
+  timeout: 120
+  workers: 10
+eval:
+  modes:
+  - openqa
+  ctx_types:
+  - 'false'
+  seed: 7
+output_dir: runs/OnlyQuestion/new/meta-llama/llama-4-maverick/

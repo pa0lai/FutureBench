@@ -1,0 +1,26 @@
+region: World
+split: english
+year_min: 2023
+year_max: 2025
+retriever:
+  enabled: false
+model:
+  provider: openrouter
+  api_key_env: OPENAI_API_KEY
+  name: openai/gpt-5.1
+  endpoint: https://openrouter.ai/api/v1
+  max_tokens: 4096
+  timeout: 120
+  workers: 10
+  temperature: 0.0
+eval:
+  modes:
+  - baseline
+  - cot
+  - no_context
+  ctx_types:
+  - 'true'
+  - 'false'
+  - insuf
+  seed: 7
+output_dir: runs/gpt-5.1/

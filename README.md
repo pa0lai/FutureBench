@@ -5,10 +5,11 @@ This repository contains the code and data necessary to reproduce the experiment
 
 ## Repository Structure
 
-- `src/`: Core evaluation logic and prompt templates.
+- `src/`: Core evaluation logic.
 - `experiments/`: Scripts to run the benchmark.
 - `data/`: Contains the primary datasets (`World_Dec2024_to_Present.json`).
-- `data_pipeline/`: Scripts used for data generation and filtering.
+- `data_pipeline/`: Scripts used for data generation (`data_generation_pipeline.py`).
+- `prompts/`: Detailed documentation of all prompts used (Data Gen, Eval, Judge).
 - `analysis/`: Tools for generating plots and summarizing results.
 
 ## Setup

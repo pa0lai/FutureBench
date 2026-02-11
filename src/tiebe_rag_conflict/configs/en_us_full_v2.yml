@@ -1,0 +1,32 @@
+region: World
+split: english
+year_min: 2022
+year_max: 2025
+start_month: 1
+end_month: 12
+source_file: data/merged_world_data.jsonl
+max_items: null
+retriever:
+  enabled: false
+  provider: openai
+  encoder: text-embedding-3-small
+  batch_size: 64
+  topk: 10
+  api_key_env: OPENAI_API_KEY
+model:
+  provider: openrouter
+  name: google/gemini-3-flash-preview
+  endpoint: https://openrouter.ai/api/v1
+  max_tokens: 500
+  temperature: 0.7
+  timeout: 120
+  workers: 10
+eval:
+  modes:
+  - openqa
+  ctx_types:
+  - 'true'
+  - 'false'
+  - insuf
+  seed: 7
+output_dir: runs/en_us_full_v2/
