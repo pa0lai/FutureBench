@@ -65,6 +65,3 @@ The dataset uses a JSON format where each entry contains:
 - `gold_answer`: The ground truth.
 - `triplets`: A set of contexts ($C_T$, $C_F$, $C_I$) for testing robustness.
 
-## License
-
-This project is licensed under the MIT License.
