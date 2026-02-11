@@ -1,0 +1,16 @@
+
+openai
+openrouter
+google-generativeai
+anthropic
+python-dotenv
+pandas
+numpy
+tqdm
+matplotlib
+seaborn
+scipy
+argparse
+requests
+pyyaml
+pathlib
