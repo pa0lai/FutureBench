@@ -9,7 +9,7 @@ set -e
 export PYTHONPATH=src
 
 # Configuration
-JUDGE_MODEL="google/gemini-3-flash-preview"
+JUDGE_MODEL="openai/gpt-5.2-chat"
 RUNS_DIR="runs"
 DATA_DIR="data"
 
